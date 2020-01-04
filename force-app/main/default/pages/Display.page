@@ -1,0 +1,22 @@
+<apex:page showHeader="true" sidebar="false" controller="ShowAccount" >
+    <h1>
+        <center>Welcome</center>
+    </h1>
+    <apex:form >
+        <apex:pageBlock >
+    <apex:pageBlockSection >
+        <apex:pageBlockTable value="{!acc}" var="a">
+        <apex:column >
+            <a href = "/{!a.Id}">{!a.Name}</a>
+            </apex:column>
+            <apex:column value="{!a.Id}"/>
+                <apex:column value="{!a.BillingCity}"/>
+             <apex:column value="{!a.Phone}"/>
+             <apex:column value="{!a.Description}"/>
+        </apex:pageBlockTable>
+        
+        </apex:pageBlockSection>
+            </apex:pageBlock>
+    </apex:form>
+    
+</apex:page>
